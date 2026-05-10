@@ -15,7 +15,7 @@ const io = new Server(server, {
 });
 
 // URL API Laravel Anda
-const LARAVEL_API_URL = "http://localhost:8000/api/config";
+const LARAVEL_API_URL = `${process.env.API_URL}/api/live-config`;
 
 async function startServer() {
   try {
