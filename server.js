@@ -23,6 +23,8 @@ let audioConfig = {
   new_user_sound_enabled: true,
   chat_sound: "/storage/sounds/chat.mp3",
   chat_sound_enabled: true,
+  tts_active: true,
+  tts_voice: "female",
 };
 
 async function fetchConfig() {
@@ -34,6 +36,8 @@ async function fetchConfig() {
     new_user_sound_enabled: data.new_user_sound_enabled,
     chat_sound: data.chat_sound,
     chat_sound_enabled: data.chat_sound_enabled,
+    tts_active: data.tts_active,
+    tts_voice: data.tts_voice,
   };
 
   return data;
