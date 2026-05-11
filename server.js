@@ -150,6 +150,7 @@ async function startServer() {
       // Event Follow/Share juga bisa dianggap sebagai interaksi "Join" atau sosial
       tiktokLive.on("social", (data) => {
         console.log(`[Social] ${data.uniqueId} performed: ${data.displayType}`);
+        logToLaravel("social", data);
         io.emit("social", {
           username: data.uniqueId,
           nickname: data.nickname,
