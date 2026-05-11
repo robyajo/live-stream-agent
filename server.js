@@ -124,7 +124,7 @@ async function startServer() {
             if (username === currentUsername) {
               connectToTikTok(username);
             }
-          }, 10000);
+          }, 60000);
         });
 
       tiktokLive.on("member", (data) => {
